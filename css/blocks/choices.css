@@ -1,0 +1,36 @@
+.choices {
+    width: 25%;
+    margin: 0;
+    height: 44px
+}
+
+
+.choices-select__inner,
+.choices-select__highlight {
+    border-radius: 6px;
+    height: 44px;
+    border: 2px solid #00acc1;
+    width: 100%;
+}
+
+.choices__list--single {
+    padding: 6px;
+}
+
+
+.choices-select__highlight {
+    background-color: #a2da88;
+}
+
+.choices-btn {
+    background-color: #ce3ca5;
+    height: 100%;
+}
+
+
+.choices__list--dropdown .choices__item {
+    font-size: 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+}

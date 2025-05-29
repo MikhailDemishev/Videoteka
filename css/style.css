@@ -1,0 +1,19 @@
+/* Global */
+/* ------------------------------------ */
+@import "global/fonts.css";
+@import "global/reboot.css";
+@import "global/container.css";
+@import "global/visually-hidden.css";
+
+/* Blocks */
+/* ------------------------------------ */
+@import "blocks/btn.css";
+@import "blocks/film-form.css";
+@import "blocks/custom-input.css";
+@import "blocks/custom-checkbox.css";
+@import "blocks/output.css";
+@import "blocks/choices.css";
+@import "blocks/search.css";
+@import "blocks/alerts.css";
+
+

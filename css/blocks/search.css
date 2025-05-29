@@ -1,0 +1,18 @@
+.search__wrapper {
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.search__bar {
+    display: flex;
+    gap: 20px;
+    background-color: #fff;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #999;
+}
+ 

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> task1
+    </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <section class="film">
+            <div class="container">
+                <h1 class="film-title">Сортировка фильмов</h1>
+                <form class="film-form" id="film-form">
+                    <div class="custom-input">
+                        <label class="custom-input__label" for="film-title">Название</label>
+                        <input class="custom-input__field" id="film-title" type="text" name="title"
+                            placeholder="Введите название фильма">
+                    </div>
+                    <div class="custom-input">
+                        <label class="custom-input__label" for="film-genre">Жанр</label>
+                        <input class="custom-input__field" id="film-genre" type="text" name="genre"
+                            placeholder="Введите жанр фильма">
+                    </div>
+                    <div class="custom-input">
+                        <label class="custom-input__label" for="film-year">Год</label>
+                        <input class="custom-input__field" id="film-year" type="number" name="releaseYear"
+                            placeholder="Введите год выпуска фильма">
+                    </div>
+                    <div class="custom-checkbox">
+                        <input class="custom-checkbox__field visually-hidden" type="checkbox" id="isWatched"
+                            name="isWatched">
+                        <label class="custom-checkbox__label" for="isWatched">
+                            <span class="custom-checkbox__text">
+                                Успели посмотреть?
+                            </span>
+                            <svg class="custom-checkbox__icon" width="12" height="9">
+                                <use href="img/sprite.svg#icon-check"></use>
+                            </svg>
+                        </label>
+                    </div>
+                    <!-- <input type="submit" value="Submit"> -->
+                    <button class="btn film-form__btn" type="submit">Добавить</button>
+                </form>
+            </div>
+        </section>
+        <section class="search">
+            <div class="container">
+                <div class="search__wrapper">
+                    <div class="search__bar">
+                        <div class="custom-input">
+                            <input class="custom-input__field" id="film-title-search" type="text" name="title"
+                                data-name="title" placeholder="Название фильма">
+                        </div>
+                        <div class="custom-input">
+                            <input class="custom-input__field" id="film-genre-search" type="text" name="genre"
+                                data-name="genre" placeholder="Жанр">
+                        </div>
+                        <div class="custom-input">
+                            <input class="custom-input__field" id="film-year-search" type="text" name="releaseYear"
+                                data-name="releaseYear" placeholder="Год релиза">
+                        </div>
+                        <select class="choices choices-select" id="sortby" name="sortby" data-name="isWatched">
+                            <option value="all">Все</option>
+                            <option value="watched">Просмотренные</option>
+                            <option value="notWatched">Непросмотренные</option>
+                        </select>
+                    </div>
+                    <button class="btn btn--delete-all" type="button">Удалить все</button>
+                </div>
+
+            </div>
+        </section>
+        <section class="output">
+            <div class="container">
+                <h2 class="output__title">Таблица фильмов</h2>
+                <div class="output__wrapper">
+                    <table class="output__table" id="film-table">
+                        <thead class="output__table-head">
+                            <tr class="output__table-row">
+                                <th class="output__table-header-cell">№ п/п</th>
+                                <th class="output__table-header-cell" data-field="title">
+                                    <div class="output__table-header-cell-wrapper">
+                                        <span class="output__table-header-cell-title">
+                                            Название
+                                        </span>
+                                        <div class="output__table-header-cell-sort">
+                                            <button class="output__table-header-cell-sort-up" type="button">▲</button>
+                                            <button class="output__table-header-cell-sort-down" type="button">▼</button>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th class="output__table-header-cell" data-field="genre">
+                                    <div class="output__table-header-cell-wrapper">
+                                        <span class="output__table-header-cell-title">
+                                            Жанр
+                                        </span>
+                                        <div class="output__table-header-cell-sort">
+                                            <button class="output__table-header-cell-sort-up" type="button">▲</button>
+                                            <button class="output__table-header-cell-sort-down" type="button">▼</button>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th class="output__table-header-cell" data-field="releaseYear">
+                                    <div class="output__table-header-cell-wrapper">
+                                        <span class="output__table-header-cell-title">
+                                            Год
+                                        </span>
+                                        <div class="output__table-header-cell-sort">
+                                            <button class="output__table-header-cell-sort-up" type="button">▲</button>
+                                            <button class="output__table-header-cell-sort-down" type="button">▼</button>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th class="output__table-header-cell">Успели посмотреть?</th>
+                                <th class="output__table-header-cell">Действие</th>
+                            </tr>
+                        </thead>
+                        <tbody class="output__table-body" id="film-tbody">
+                            <!-- Rows will be inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="alert-no-add">
+        <div class="alert-no-add__inner">
+            <p class="alert-no-add__text"></p>
+            <button class="alert-no-add__button" type="button">&times;</button>
+        </div>
+    </div>
+    <div class="alert-deletion" tabindex="-1">
+        <div class="alert-deletion__inner">
+            <p class="alert-deletion__text">Вы действительно хотите очистить таблицу фильмов?</p>
+            <div class="alert-deletion__button-wrapper">
+                <button class="btn alert-deletion__button alert-deletion__button--delete" type="button">Удалить</button>
+                <button class="btn alert-deletion__button alert-deletion__button--back" type="button">Вернуться</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+
+</body>
+
+</html>

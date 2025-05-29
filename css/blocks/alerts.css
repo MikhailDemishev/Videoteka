@@ -1,0 +1,63 @@
+.alert-no-add,
+.alert-deletion {
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgb(181, 87, 87);
+    padding: 30px;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    display: none;
+}
+
+.alert-no-add--active {
+    display: block;
+}
+
+.alert-no-add__inner {
+    display: flex;
+    position: relative;
+}
+
+.alert-no-add__text,
+.alert-deletion__text {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 20px;
+}
+
+.alert-no-add__button {
+    font-size: 50px;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    cursor: pointer;
+}
+
+/*--------*/
+
+.alert-deletion {
+    background-color: rgb(137, 196, 121);
+}
+
+.alert-deletion--active {
+    display: block;
+}
+
+.alert-deletion__button-wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert-deletion__button {
+    background-color: #e2dd62;
+}
+
+.alert-deletion__button--delete {
+    background-color: #ff0000;
+}

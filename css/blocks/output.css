@@ -1,0 +1,83 @@
+.output__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 60px;
+}
+
+.output__table {
+    width: 100%;
+    background-color: #fff;
+    table-layout: fixed;
+    text-align: left;
+    border-collapse: collapse;
+    box-shadow: 0px 0px 5px #999;
+}
+
+.output__title {
+    margin: 0;
+    font-weight: 200;
+    font-size: 40px;
+    line-height: 52px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 20px;
+
+}
+
+.output__table-header-cell,
+.output__table-cell {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+
+.output__table-header-cell {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+
+.output__table-cell {
+    vertical-align: top;
+    text-align: center;
+}
+
+.output__table-header-cell:first-child,
+.output__table-cell:first-child {
+    width: 100px;
+}
+
+
+.output__table-header-cell:last-child,
+.output__table-cell:last-child {
+    width: 350px;
+}
+
+.output__table-header-cell:last-child {
+    text-align: center;
+}
+
+.table-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center; 
+  align-items: center;
+}
+
+.output__table-header-cell-wrapper {
+    display: flex;
+    gap: 5px;
+}
+
+
+.output__table-header-cell-sort-up,
+.output__table-header-cell-sort-down{
+    background-color: transparent;
+    color: #FFFFFF;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}

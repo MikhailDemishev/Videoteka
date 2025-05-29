@@ -1,0 +1,111 @@
+.custom-input {
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.search__bar .custom-input {
+    width: 25%;
+    height: 100%;
+}
+
+
+
+.custom-input__label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    position: absolute;
+    top: -40px;
+
+}
+
+
+.custom-input__field {
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+    border: 1px solid #CDCFDE;
+    border-color: #CDCFDE;
+    padding: 14px 16px;
+    color: #1E222E;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.custom-input--error .custom-input__field {
+    border-color: #F9C4C2;
+    background-color: #FFFBFB;
+}
+
+.custom-input--error .custom-input__error {
+    display: block;
+}
+
+.custom-input--error .custom-input__icon {
+    color: #F9C4C2;
+} 
+
+
+
+.custom-input__field:hover,
+.custom-input__field:focus-visible {
+    border-color: #3356D7;    
+    outline: none;
+}
+
+.custom-input__field::placeholder {
+    color: #8F939F;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+
+.custom-input__icon {
+    color: #8F939F;
+    position: absolute;
+    right: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.custom-input__field:hover ~ .custom-input__icon{
+    color: #3356D7;
+}
+
+
+
+.custom-input__field:focus-visible ~ .custom-input__icon{
+    color: #3356D7;
+}
+ 
+.custom-input--captcha .custom-input__label { 
+    font-size: 16px;
+    line-height: 20px;
+    color: #8F939F;    
+    user-select: none;
+    padding: 0;
+    left: 0;
+    background-color: unset;
+    transform: none;
+    top: -28px;  
+
+}
+.custom-input--captcha .custom-input__content {
+    position: absolute;
+    right: 0; 
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%); 
+}
+
+
+.custom-input__error {
+    color: #F6514B;
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 8px;
+    display: none;
+}
